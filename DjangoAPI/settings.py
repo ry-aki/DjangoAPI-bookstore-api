@@ -78,8 +78,23 @@ WSGI_APPLICATION = 'DjangoAPI.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+import os
 import pymysql
+import MySQLdb
+pymysql.install_as_MySQLdb()
+DATABASES = {
+  'default': {
+    'ENGINE': 'django_psdb_engine',
+    'NAME': os.environ.get('DB_NAME'),
+    'HOST': os.environ.get('DB_HOST'),
+    'PORT': os.environ.get('DB_PORT'),
+    'USER': os.environ.get('DB_USER'),
+    'PASSWORD': os.environ.get('DB_PASSWORD'),
+    'OPTIONS': {'ssl': {'ca': os.environ.get('MYSQL_ATTR_SSL_CA')}}
+  }
+}
+
+"""import pymysql
 pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
@@ -90,7 +105,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
-}
+}"""
 
 
 # Password validation
