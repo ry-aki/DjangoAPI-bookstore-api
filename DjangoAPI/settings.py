@@ -82,6 +82,7 @@ import os
 import pymysql
 import MySQLdb
 pymysql.install_as_MySQLdb()
+
 DATABASES = {
   'default': {
     'ENGINE': 'django_psdb_engine',

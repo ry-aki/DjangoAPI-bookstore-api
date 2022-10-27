@@ -1,10 +1,31 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
-import os
+
 import sys
 from dotenv import load_dotenv
 load_dotenv()
+import os
+import MySQLdb
 
+connection = MySQLdb.connect(
+  host= os.getenv("HOST"),
+  user=os.getenv("USERNAME"),
+  passwd= os.getenv("PASSWORD"),
+  db= os.getenv("DATABASE"),
+  ssl      = {
+    "ca": "/etc/ssl/cert.pem"
+  }
+)
+"""connection = MySQLdb.connect(
+    host     = 'us-east.connect.psdb.cloud',
+    user     = 'ubasc9rjvwdyq20mt87m',
+    passwd   = 'pscale_pw_3Gj4SZ3oWO68GgN2EvOAUDfPPRTZ96Eoi8mCkUbb18t',
+    db       = 'bookstore',
+    #ssl_mode = "VERIFY_IDENTITY",
+    ssl      = {
+        "ca": "/etc/ssl/certs/ca-certificates.crt"
+    })
+"""
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DjangoAPI.settings')
