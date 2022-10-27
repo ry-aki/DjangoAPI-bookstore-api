@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "4e7d6383-9199-4e97-84ec-a72ac1e15f98",
+		"name": "bookstore_bookmodel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21423602"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/book-list/id/2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"unique_id\": 4,\r\n        \"title\": \"Malgudi Days\",\r\n        \"author_name\": \"R K Narayan\",\r\n        \"cost\": \"99.9\",\r\n        \"publication_year\": 1943,\r\n        \"pages\": 175\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-list/id/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-list",
+						"id",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/book-list/title/Magudi Days",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"unique_id\": 4,\r\n        \"title\": \"Malgudi Days\",\r\n        \"author_name\": \"R K Narayan\",\r\n        \"cost\": \"99.9\",\r\n        \"publication_year\": 1943,\r\n        \"pages\": 175\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-list/title/Malgudi Days",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-list",
+						"title",
+						"Malgudi Days"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/book-list/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/book-list/author/R K Narayan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-list/author/R K Narayan",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-list",
+						"author",
+						"R K Narayan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/book-update/1004",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"unique_id\": 1,\r\n        \"title\": \"Pride and Prejudice\",\r\n        \"author_name\": \"Jane Austen\",\r\n        \"cost\": \"399\",\r\n        \"publication_year\": 1813\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-update/1004/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-update",
+						"1004",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/book-delete/1004",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"title\": \"Pride and Prejudice\",\r\n        \"author_name\": \"Jane Austen\",\r\n        \"cost\": \"399\",\r\n        \"publication_year\": 1813\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-delete/1004/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-delete",
+						"1004",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/book-add/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"title\": \"Pride and Prejudice\",\r\n        \"author_name\": \"Jane Austen\",\r\n        \"cost\": \"399\",\r\n        \"publication_year\": 1813\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book-add/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book-add",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
