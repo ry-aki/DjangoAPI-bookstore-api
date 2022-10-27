@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+"""from dotenv import load_dotenv
 load_dotenv()
 import os
 import MySQLdb
@@ -11,4 +11,4 @@ connection = MySQLdb.connect(
   ssl      = {
     "ca": "/etc/ssl/cert.pem"
   }
-)
+)"""

@@ -10,4 +10,4 @@ class BookModel(models.Model):
     pages = models.IntegerField(null = True, blank = True)
 
 def __str__(self):
-    return self.name
+    return self.title

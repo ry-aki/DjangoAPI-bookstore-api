@@ -82,7 +82,15 @@ import os
 import pymysql
 import MySQLdb
 pymysql.install_as_MySQLdb()
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
 
+#remote database on planetscale
+"""
 DATABASES = {
   'default': {
     'ENGINE': 'django_psdb_engine',
@@ -93,8 +101,9 @@ DATABASES = {
     'PASSWORD': os.environ.get('DB_PASSWORD'),
     'OPTIONS': {'ssl': {'ca': os.environ.get('MYSQL_ATTR_SSL_CA')}}
   }
-}
+}"""
 
+#mysql local database
 """import pymysql
 pymysql.install_as_MySQLdb()
 DATABASES = {
